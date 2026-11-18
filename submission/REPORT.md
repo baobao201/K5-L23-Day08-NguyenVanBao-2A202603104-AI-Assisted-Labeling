@@ -45,10 +45,15 @@
 
 | Ảnh | SAM (phiên bản) | Số click | Mask gồm người lái / hàng hoá? | Lỗi quan sát | File trong `masks/` |
 |---|---|---|---|---|---|
-| <<img_0xx>> | <<>> | <<>> | <<>> | <<>> | <<>> |
+| `img_004.jpg` | SAM 2.1 (`sam2.1_b.pt`) | 3 click (2 pos, 1 neg) | Không (xe rỗng đỗ bên đường; click âm loại bỏ thành công người đứng cạnh xe) | Ranh giới bám mui xe và kính chắn gió rất chuẩn; phần gầm xe và bóng râm chân bánh trước bị lẹm nhẹ ra mặt đường gạch (~5-10px). | `tuktuk_img004_sam2.jpg` |
+| `img_013.jpg` | SAM 1 (`sam_b.pt`) | 3 click (2 pos, 1 neg) | Có gồm người lái: dù có 1 click âm lên áo, mask vẫn nuốt trọn khuôn mặt, tai và bàn chân người lái; dính một phần cánh tay hành khách sau. | Ranh giới bị rách viền, đốm hạt quanh cụm đồng hồ trước; nan sắt trang trí bị đục lỗ lẹm sang nền; biên mask thô hơn SAM 2.1. | `tuktuk_img013_sam1.jpg` |
+| `img_013.jpg` | SAM 2.1 (`sam2.1_b.pt`) | 3 click (2 pos, 1 neg) | Vẫn bị dính người lái (mặt, chân, phần lưng); 1 click âm không đủ bóc tách người lái ra khỏi khung xe theo guideline v1.0. | Viền thân xe bám mượt hơn SAM 1, nhưng xuất hiện hiện tượng rách lốm đốm (pepper noise) trên áo người lái do click âm gây nhiễu biên. | `tuktuk_img013_sam2.jpg` |
+| `img_017.jpg` | SAM 2.1 (`sam2.1_b.pt`) | 3 click (2 pos, 1 neg) | Không (xe đỗ không có người lái; không bị dính người đi bộ qua đường ở cạnh xe) | Click âm đặt ở đỉnh mui (nhằm loại bạt quán ăn phía sau) tạo ra vết khuyết/lỗ rách sâu trên vải mui xe tuk-tuk. Bù lại, bánh xe và gầm bám khít mặt đường nhựa. | `tuktuk_img017_sam2.jpg` |
 
-- Đối chiếu guideline mục 4.2: quy tắc nào giúp, quy tắc nào thiếu? <<>>
-- *(Tuỳ chọn)* Interactor SAM trong CVAT: làm được / không (lỗi gì, đã thử gì); khác gì offline: <<>>
+- Đối chiếu guideline mục 4.2: quy tắc nào giúp, quy tắc nào thiếu? 
+  - **Quy tắc giúp ích:** Quy tắc 4.2.2 về lỗ thủng (<5% diện tích không cần khoét lỗ) giúp xử lý các khe nan sắt trang trí trên thành xe tuk-tuk mà không phải mất công bấm thêm hàng chục click âm; quy tắc 4.2.3 (kính xe thuộc vật, bóng đổ không thuộc vật) giúp định hướng click chuẩn xác vào kính chắn gió và loại bỏ bóng chân xe.
+  - **Quy tắc còn thiếu:** Guideline v1.0 chưa có quy định cụ thể về việc bóc tách polygon giữa người lái/hành khách và phương tiện hở buồng lái (tuk-tuk, xích lô, ba gác). Do SAM có xu hướng gom toàn bộ cụm vật thể ("một click, ba mask hợp lệ"), nếu không có quy định số điểm click âm tối thiểu hoặc chấp nhận mask xe bao trùm người lái (khi đã có box `person` riêng), người gán nhãn sẽ mất rất nhiều thời gian tỉa mask thủ công.
+- *(Tuỳ chọn)* Interactor SAM trong CVAT: làm được / không (lỗi gì, đã thử gì); khác gì offline: Đã thử nghiệm công cụ AI Tools (Interactor SAM) trên giao diện CVAT (click chuột trái tạo điểm dương, click chuột phải tạo điểm âm). Khác biệt lớn nhất so với script offline (`sam2_points.py`): CVAT Interactor hiển thị mask tức thời sau mỗi click, cho phép tương tác trực quan linh hoạt và gán trực tiếp nhãn đúng (`three_wheeler`) ngay tại giao diện; trong khi script offline phải căn tọa độ pixel trước (`--pos "x,y"`), mất nhiều lần thử nghiệm lại tọa độ nhưng chạy độc lập không phụ thuộc hạ tầng Docker Nuclio.
 
 ## 6. Calibration (Part 6)
 

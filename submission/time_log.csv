@@ -1,1 +1,26 @@
 step,images,minutes,note
+gold_manual,"img_001.jpg, img_012.jpg, img_020.jpg, img_036.jpg",22,Gán nhãn thủ công 4 ảnh gold không dùng AI (~5.5 phút/ảnh)
+batch_review,img_003.jpg,5,Ảnh 01/24: 24 box (xe máy & người đi bộ)
+batch_review,img_004.jpg,5,Ảnh 02/24: 8 box (bắt bẫy tuk-tuk)
+batch_review,img_005.jpg,4,Ảnh 03/24: 25 box (cụm xe máy dày)
+batch_review,img_006.jpg,3,Ảnh 04/24: 21 box (người & xe máy)
+batch_review,img_008.jpg,3,Ảnh 05/24: 15 box (three_wheeler & ô tô)
+batch_review,img_009.jpg,2,"Ảnh 06/24: 4 box (thưa, duyệt nhanh)"
+batch_review,img_010.jpg,2,Ảnh 07/24: 8 box (three_wheeler & người)
+batch_review,img_013.jpg,3,Ảnh 08/24: 10 box (xe tuk-tuk & xe bus)
+batch_review,img_014.jpg,3,Ảnh 09/24: 18 box (xe máy & người đi bộ)
+batch_review,img_017.jpg,2,Ảnh 10/24: 6 box (three_wheeler)
+batch_review,img_018.jpg,5,Ảnh 11/24: 54 box (rất dày xe máy & người)
+batch_review,img_021.jpg,4,Ảnh 12/24: 37 box (giao lộ đông xe)
+batch_review,img_022.jpg,3,Ảnh 13/24: 13 box (người & xe máy)
+batch_review,img_023.jpg,2,Ảnh 14/24: 9 box (three_wheeler & ô tô)
+batch_review,img_024.jpg,4,Ảnh 15/24: 29 box (nhiều ô tô & người)
+batch_review,img_025.jpg,3,Ảnh 16/24: 14 box (người & xe máy)
+batch_review,img_026.jpg,2,Ảnh 17/24: 11 box (xe máy & người)
+batch_review,img_027.jpg,3,Ảnh 18/24: 22 box (hỗn hợp phương tiện)
+batch_review,img_028.jpg,4,Ảnh 19/24: 31 box (người & xe cộ đông)
+batch_review,img_029.jpg,3,Ảnh 20/24: 23 box (người & ô tô)
+batch_review,img_031.jpg,2,"Ảnh 21/24: 3 box (thưa, duyệt nhanh)"
+batch_review,img_033.jpg,2,Ảnh 22/24: 8 box (người & ô tô)
+batch_review,img_034.jpg,3,Ảnh 23/24: 24 box (xe máy & người)
+batch_review,img_035.jpg,3,"Ảnh 24/24: 26 box (người, xe máy, xe đạp)"
