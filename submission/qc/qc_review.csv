@@ -1,0 +1,7 @@
+image,object_id,error_type,reviewer,note
+img_003.jpg,24,thua,Nguyen Van Bao,Box person trùng lặp với object_id 2 trên người lái xe ba gác
+img_006.jpg,59,sai_lop,Nguyen Van Bao,Vách biển hiệu ngõ hẹp Tạ Hiện bị gán nhầm thành car (conf 0.55)
+img_014.jpg,,khong,Nguyen Van Bao,Ảnh sạch: 18 đối tượng người và xe máy phân tách rõ ràng và ôm sát
+img_031.jpg,,khong,Nguyen Van Bao,"Ảnh sạch: 3 đối tượng (người bán hàng, xe đạp, người ngồi ghế) gán đúng chuẩn"
+img_035.jpg,428,sai_lop,Nguyen Van Bao,Xe máy bị gán nhầm thành bicycle (bẫy wrong_class bị lọt)
+img_035.jpg,425,thua,Nguyen Van Bao,Box thừa trùng lặp nằm trong object_id 443 trên người đi bộ
